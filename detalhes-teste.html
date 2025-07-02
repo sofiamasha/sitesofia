@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detalhes do Pet</title>
+</head>
+<body>
+  <h1>Detalhes do Pet</h1>
+  <p id="petIdDisplay">Carregando...</p>
+
+  <script>
+  
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+const currentPetId = params.get('petId');
+
+
+      const petIdDisplay = document.getElementById('petIdDisplay');
+
+      if (petId) {
+        console.log('ID do pet:', petId);
+        petIdDisplay.textContent = `ID do pet: ${petId}`;
+        // Aqui você pode chamar sua função para buscar os detalhes do pet pelo petId
+      } else {
+        console.warn('ID do pet não encontrado na URL.');
+        petIdDisplay.textContent = "ID do pet não disponível. Por favor, abra a página com o parâmetro 'petId' na URL.";
+      }
+    });
+  </script>
+</body>
+</html>

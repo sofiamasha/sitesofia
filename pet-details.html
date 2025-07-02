@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalhes do PET</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pet-details.css">
+  <style>
+    .favorited {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="petName">Carregando...</h1>
+    <p id="petDescription">Aguarde, estamos carregando a descrição do PET.</p>
+
+    <div class="pet-detail-layout">
+      <div class="owner-card">
+        <button id="contactButton">Entrar em Contato com o Doador</button>
+      </div>
+
+      <div class="pet-actions">
+        <button id="adoptButton">Adotar</button>
+        <span id="favoriteIcon" style="cursor:pointer; font-size: 24px;">❤️</span>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" class="search-box" placeholder="Buscar outro PET por nome...">
+      <button id="searchButton">Buscar</button>
+    </div>
+
+    <div id="petListContainer"></div>
+  </div>
+
+  <script type="module" src="pet-details.js"></script>
+</body>
+</html>

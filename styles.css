@@ -1,0 +1,61 @@
+
+main {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #f4f4f4; 
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 900px) {
+  .pet-detail-layout {
+    grid-template-columns: 1fr; 
+  }
+  .owner-card {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-container {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .search-box {
+      width: calc(100% - 22px); /
+  }
+  .pet-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .pet-attributes {
+    margin-top: 20px;
+  }
+  /* Ícone de favoritar que esta com bug*/
+#favoriteIcon {
+  cursor: pointer;
+  font-size: 24px;
+  color: #bbb; /* cinza claro padrão */
+  transition: color 0.3s ease;
+}
+
+#favoriteIcon:hover {
+  color: #ffffff; /* branco no hover */
+}
+
+#favoriteIcon.favorited {
+  color: #e74c3c; /* vermelho quando favoritado */
+  filter: drop-shadow(0 0 3px #e74c3c);
+}
+
+
+}

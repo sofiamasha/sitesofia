@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PETMATCH - Adoção de Pets</title>
+  <meta name="description" content="Adote o pet Scooby e descubra mais sobre seu perfil e o responsável por ele." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="pet-card.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+   <link rel="stylesheet" href="../../components/sidebar/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <h1 class="logo">PETMATCH</h1>
+      <div class="search-container">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Pesquisar..." aria-label="Campo de pesquisa" />
+          <button type="submit" class="search-button" id="searchButton" aria-label="Buscar pet">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="pet-detail-layout">
+        <section class="pet-details-column" aria-label="Detalhes do pet">
+          <div id="imgContainer">
+
+            <img
+              src="https://images.pexels.com/photos/1124002/pexels-photo-1124002.jpeg"
+              alt="Foto do pet Scooby"
+              class="pet-image"
+              id="petImage"
+            />
+          </div>
+
+          <h1 class="pet-name" id="petName">SCOOBY</h1>
+
+          <div class="pet-info-grid">
+            <div class="pet-description">
+              <p id="petDescription">
+                Scooby é um pet amigável e ativo que está em busca de um novo lar cheio de amor.
+              </p>
+            </div>
+
+            <div class="pet-attributes">
+              <h2 class="attributes-title">Sobre o PET</h2>
+              <table class="attributes-table" aria-label="Características do pet">
+                <tr>
+                  <td>Animal</td>
+                  <td id="petSpecies">Cachorro</td>
+                </tr>
+                <tr>
+                  <td>Raça</td>
+                  <td id="petBreed">Shih-tzu</td>
+                </tr>
+                <tr>
+                  <td>Gênero</td>
+                  <td id="petGender">Macho</td>
+                </tr>
+                <tr>
+                  <td>Idade</td>
+                  <td id="petAge">6 Meses</td>
+                </tr>
+                <tr>
+                  <td>Vacinado</td>
+                  <td id="petVaccinated">Sim</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="button-cont">
+
+            <button style="flex: 1;" class="adopt-button" id="adoptButton" aria-label="Quero adotar esse pet">
+              Quero adotar esse PET
+              <i class="fas fa-heart heart-icon" id="favoriteIcon" aria-hidden="true"></i>
+            </button>
+            
+            <button id="donor-btn" class="adopt-button"><i class="material-icons">person</i> Ver doador</button>
+          </div>
+
+        </section>
+      </div>
+    </div>
+
+    <div class="container">
+      <section id="petListContainer" class="pet-cards-grid" aria-label="Outros pets disponíveis para adoção">
+        <!-- Os pets vão aparecer aqui -->
+      </section>
+    </div>
+  </main>
+    <script type="module" src="../../utils/verify-login.js"></script>
+
+    <script type="module" src="../../components/sidebar/sidebar.js"></script>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
